@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Screenshot
 
-![screenshot](![Screenshot_20230828_022304](https://github.com/Okaga-AM/e-commerce/assets/127199665/4b0e796d-5e4b-4f6c-ab12-f60d56df47b2)
-)
+https://github.com/Okaga-AM/e-commerce/assets/127199665/4b0e796d-5e4b-4f6c-ab12-f60d56df47b2)
+
 
 
 ### Links
