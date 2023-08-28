@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Okaga-AM/e-commerce)
-- Live Site URL: [Add live site URL here](https://okaga-am.github.io/e-commerce/)
+- Solution URL: [](https://github.com/Okaga-AM/e-commerce)
+- Live Site URL: [](https://okaga-am.github.io/e-commerce/)
 
 
 
