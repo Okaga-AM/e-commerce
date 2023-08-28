@@ -1,0 +1,697 @@
+body{
+    font-family: myfont;
+    margin: 1.5rem 15rem;
+    background-color: hsl(0, 0%, 100%);
+}
+
+@font-face {
+    font-family: myfont;
+    src: url('KumbhSans-VariableFont_YOPQ,wght.ttf') format('truetype');
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem ;
+    border-bottom: 0.5px solid hsl(220, 14%, 75%);
+    padding-bottom: 1.8rem;
+}
+.navlist{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 2rem;
+    font-size: small;
+    font-weight: 400;
+    color: hsl(219, 9%, 45%);
+}
+.navlist li{
+   transition: all 0.2s ease-in-out;
+}
+.navlist li:hover{
+    color: hsl(220, 13%, 13%);
+    font-weight: 500;
+    cursor: pointer;
+    border-bottom: 3px solid hsl(26, 100%, 55%);
+    display: inline-block;
+    margin-bottom: -2.7rem;
+}
+.navbar img{
+    height: 1rem;
+    margin: auto 0
+}
+#topcheck{
+    padding-left: 24rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem
+}
+#topcheck svg{
+    padding-top: 0.7rem;
+}
+#topcheck svg:hover{
+    cursor: pointer;
+}
+#cart-number{
+    margin: 0;
+    position: absolute;
+    z-index: 3;
+    right: 21.8rem;
+    font-size: 8px;
+    top: 1.7rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 4rem;
+    background-color: hsl(26, 100%, 55%);
+    color: white;
+    display: none;
+}
+#profile{
+    height: 2.5rem
+}
+#profile:hover{
+    cursor: pointer;
+    border: 2px solid hsl(26, 100%, 55%);
+    border-radius: 50%;
+    margin-left: -0.1rem;
+    margin-bottom: -0.05rem;
+}
+#main_cart, #main_cart2{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding-top: 1.5rem;
+}
+#cart_summary, #cart_summary2{
+    padding: 1rem;
+    box-shadow: 0px 10px 20px 2px rgb(206, 206, 206);
+    width:fit-content;
+    overflow: hidden;
+    border-radius: 0.4rem;
+    position: absolute;
+    right: 13rem;
+    display: none;
+    height: 0px;
+    top: 5.5rem;
+    background-color: white;
+    transition:  width .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-delay: 5s;
+    
+}
+
+#cart_summary.active{
+    height: max-content;
+    display: block
+}
+#cart_summary.closed, #cart_summary2.closed{
+    display: none
+}
+#cart_summary2.active{
+    height: max-content;
+    display: block
+
+}
+#main_cart2{
+    padding: 3rem 5rem
+}
+
+#cart_text{
+    font-weight: bolder;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgb(195, 193, 193);
+    
+}
+#cart_text2{
+    font-weight: bolder;
+    border-bottom: 1px solid rgb(195, 193, 193)
+}
+#cart_text p{
+    margin: 0
+}
+#cart_img{
+    height: 2.4rem;
+    border-radius: 0.3rem;
+}
+#calcs{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+#calcs p{
+    margin: 0;
+    font-size: small;
+    color: hsl(219, 9%, 45%);
+}
+#checkout{
+    color: white;
+    background-color: hsl(26, 100%, 55%);
+    padding: 1rem 7rem;
+    border: none;
+    border-radius: 0.5rem;
+    
+}
+#calcs i{
+    font-style: normal;
+}
+#total{
+    font-weight: bolder;
+    color: black;
+}
+#button_section{
+    padding-top: 1.5rem;
+    
+}
+#main_cart svg{
+    padding-top: 1rem;
+    padding-left: 1rem
+}
+#main{
+    padding: 5rem 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 9rem
+
+}
+.product_img{
+    height: 23rem;
+    border-radius: 0.8rem;
+}
+#pics{
+    max-width: 23rem;
+}
+#thumbs{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.4rem;
+}
+#thumbs img{
+    height: 4.5rem;
+    border-radius: 0.5rem;
+}
+.mini{
+    
+    border: 2px solid transparent;
+}
+.mini:hover{
+    filter: invert(30%) brightness(150%) ;
+    cursor: pointer;
+    
+
+}
+#thumb1.active{
+    filter: invert(30%) brightness(150%) ;
+    border: 2px solid hsl(26, 83%, 43%);
+    
+}
+#thumb2.active{
+    filter: invert(30%) brightness(150%) ;
+    border: 2px solid hsl(26, 83%, 43%);
+}
+#thumb3.active{
+    filter: invert(30%) brightness(150%) ;
+    border: 2px solid hsl(26, 83%, 43%);
+}
+#thumb4.active{
+    filter: invert(30%) brightness(150%) ;
+    border: 2px solid hsl(26, 83%, 43%);
+}
+
+#light_thumb_1.active{
+    filter: invert(30%) brightness(150%) ;
+    border: 2px solid hsl(26, 83%, 43%);
+}
+#light_thumb_2.active{
+    filter: invert(30%) brightness(150%) ;
+    border: 2px solid hsl(26, 83%, 43%);
+}
+#light_thumb_3.active{
+    filter: invert(30%) brightness(150%) ;
+    border: 2px solid hsl(26, 83%, 43%);
+}
+#light_thumb_4.active{
+    filter: invert(30%) brightness(150%) ;
+    border: 2px solid hsl(26, 83%, 43%);
+}
+
+#info{
+    padding-top: 2rem;
+}
+#info h1{
+    font-weight: 700;
+    font-size: 2.5rem;
+    padding-top: 0;
+    margin-top: 1rem;
+}
+#info h3{
+    color: hsl(26, 100%, 55%);
+    font-size: small;
+}
+#desc{
+    font-size: small;
+    line-height: 1.5rem;
+    max-width: 25rem;
+    color: hsl(219, 9%, 45%);
+}
+#price{
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+}
+
+
+#percent{
+    font-style: normal;
+    color: hsl(26, 100%, 55%);
+    font-size: small;
+    background-color: hsl(25, 100%, 94%);
+    padding: 0.2rem;
+    border-radius: 0.3rem;
+    margin-left: 0.5rem;
+   
+}
+#discount{
+    text-decoration: line-through;
+    color:hsl(220, 2%, 74%);
+    font-size: small;
+    margin-top: 0;
+    font-weight: 700;
+}
+#buying{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    background-color: hsl(223, 64%, 98%);
+    padding: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    margin: 0 1rem;
+    max-width: 7rem;
+    text-align: center
+    
+}
+#empty{
+    color:hsl(219, 9%, 45%);
+    font-weight: 700;
+    font-size: smaller;
+}
+#buysect{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+}
+#quantity{
+    margin: 0 -20px;
+    font-size: small;
+    font-weight: 700;
+    height: fit-content;
+
+}
+#buying svg{
+    margin-top: 0.2rem;
+    font-size: smaller;
+}
+#minus{
+    padding-top: 0.1rem;
+    font-size: smaller;
+}
+#main svg:hover{
+    cursor: pointer;
+    filter: opacity(40%);
+}
+#minus:hover{
+    cursor: pointer;
+}
+#plus{
+    padding-bottom: 1rem;
+    font-size: smaller;
+}
+
+#add{
+    padding: 0.6rem 4rem;
+    border-radius: 0.5rem ;
+    border: none;
+    color: white;
+    background-color: hsl(26, 100%, 55%);
+    font-size: larger;
+    box-shadow: 0px 10px 20px 1px hsl(26, 82%, 82%);
+    transition: .4s;
+
+}
+#add:hover{
+    cursor:pointer;
+    filter: opacity(50%);
+}
+#add:active{
+    transform: scale(0.95);
+}
+#cart{
+    padding-right: 0.6rem;
+    size: 0.1rem;
+    margin: 0 10px
+    
+}
+
+.light_img{
+    height: 27rem;
+    border-radius: 0.8rem;
+    
+}
+#light_thumb img{
+    height: 4.5rem;
+    border-radius: 0.5rem;
+    
+}
+#change_button svg{
+    padding: 0.7rem 0.9rem;
+    border-radius: 50%;
+
+}
+#change_button svg:hover{
+    cursor: pointer;
+}
+#prev{
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 14rem;
+    left: -1rem;
+    
+}
+#prev:hover{
+    color: orange
+}
+#next{
+    top: 14rem;
+    background-color: white;
+    position: absolute;
+    right: -1rem
+}
+
+#next:hover{
+    color: orange
+}
+
+#light_box{
+    position: absolute;
+    top: 6rem;
+    right: 34rem;
+    z-index: 4;
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+#close{
+    padding-left: 26rem;
+    padding-bottom: 0.9rem;
+    color: white
+}
+#close:hover{
+    color: orange;
+    cursor: pointer;
+}
+#light_thumb{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding-top: 1rem;
+    padding-left: 2.3rem;
+    backdrop-filter: blur(100%);
+    
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+#overlay.active{
+    position: absolute;
+    z-index: 1;
+    filter: opacity(70%);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+
+
+}
+#overlay2.active{
+    position: absolute;
+    z-index: 1;
+    filter: opacity(70%);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+
+
+}
+#menu{
+    display: none;
+}
+.navlist2{
+    display: none;
+}
+#close2{
+    display: none;
+}
+#change_button2{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navlist{
+        display: none;
+    }
+    #topcheck{
+        padding: 1rem;
+        gap: 1rem;
+        padding-left: 2rem;
+        margin-left: 5rem;
+        
+    }
+    body{
+        margin: 0
+    }
+    #main{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        gap: 0rem
+    }
+    .navbar{
+        padding: 0rem ;
+        gap:0rem;
+        border: none
+    }
+    #logo{
+        height: 1.2rem;
+       
+    }
+    #profile{
+        height: 2.1rem
+    }
+    .product_img{
+        width: 100vw;
+        height: 24rem;
+        border: none;
+        border-radius: 0;
+    }
+    #info{
+        padding: 1rem 2rem
+    }
+    #thumbs{
+        display: none;
+    }
+    
+    #desc{
+        font-size: medium;
+        max-width: 30rem;
+    }
+    #info h1{
+        font-size: 2rem; 
+    }
+    #price{
+        font-size: 2rem;
+    }
+    #percent{
+        font-size: 1.3rem;
+    }
+    .plist{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 2rem;
+    }
+    #discount{
+        margin: 0;
+        font-size: 1.2rem;
+        padding-top: 2.5rem;
+
+    }
+    #buysect{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem
+    }
+    #buying{
+        gap:8rem;
+        max-width: 100%;
+        width: 90%;
+        margin: 0 auto;
+        padding: 1rem 
+    }
+    #add{
+        
+        padding: 0.8rem 5rem;
+        font-size: small;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+        font-weight: 700;
+    }
+    #cart{
+        margin: 0
+    }
+    .attribution{
+        margin-top: 1rem;
+        padding: 1rem
+        
+    }
+    #menu{
+        display: block;
+        height: 2rem;
+        width: 2rem;
+        margin-top: 1.7rem;
+        margin-left: 1rem;
+        
+    }
+    #cart-number{
+        right: 20%;
+        top: 1.5rem;
+    }
+    .navlist2{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-left: 0;
+        padding-top: 2rem;
+        
+    }
+
+    .navlist2 li{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+        font-weight: 700;
+
+    }
+    #pop-out{
+        background-color: white;
+        transition: none;
+        position: absolute;
+        z-index: 4;
+        top: 0;
+        bottom: 0;
+        height:71rem;
+        width: 70vw;
+        padding-left: 2rem;
+        padding-top: 2rem;
+        display: none;
+        transition: all 0.25s;
+        transition-duration: 1s;
+
+    }
+    #pop-out.active{
+       display: block;
+    }
+    #overlay2{
+        height: 73rem;
+        display: none
+    }
+    #overlay2.active{
+        display: block
+
+    }
+    #close2{
+        display: block;
+    }
+    #overlay.active{
+        display: none;
+    }
+    #cart_summary, #cart_summary2{
+        width: 85vw;
+        right: 2%;
+        position: absolute;
+        font-size: medium;
+        box-shadow: 0px 10px 20px 2px rgb(104, 103, 103);
+    }
+    #cart_summary.active, #cart_summary2.active{
+        width: 85vw;
+        right: 3.3%;
+        position: absolute;
+        height:fit-content
+    }
+    #calcs p{
+        font-size: medium;
+    }
+    #checkout{
+        width: 100%;
+        font-size: medium;
+        
+    }
+    #cart_text{
+        font-size: medium;
+        padding-bottom: 2rem;
+    }
+    #cart_text2{
+        font-weight: 700;
+        border-bottom: 1px solid rgb(195, 193, 193);
+        padding-bottom: 1rem;
+    }
+    #empty{
+        font-size: medium;
+    }
+   #change_button2{
+    display: block;
+    position: absolute;
+   }
+   #change_button2 svg{
+    padding: 0.7rem 0.9rem;
+    border-radius: 50%;
+
+   }
+   #change_button svg:hover{
+    cursor: pointer;
+}
+#prev2{
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 14rem;
+    left: 2rem;
+    padding: 0.8rem 1rem
+    
+}
+#prev2:hover{
+    color: orange
+}
+#next2{
+    top: 14rem;
+    background-color: white;
+    margin-left: 83vw;
+    position: absolute;
+    border-radius: 50%;
+    padding: 0.8rem 1rem;
+}
+
+#next2:hover{
+    color: orange
+}
+
+
+    
+}
+
