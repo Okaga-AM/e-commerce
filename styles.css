@@ -471,7 +471,7 @@ body{
       position: absolute;
       top: 0.5rem;
       right: 0.5rem;
-      gap: 0;
+      gap: 2rem;
       padding: 0; 
     }
     body{
